@@ -1,0 +1,9 @@
+<ul>
+  <li
+    (click)="buscar(personaje)"
+    *ngFor="let personaje of personajes; let i = index"
+  >
+    {{ personaje.id }} - {{ personaje.name }}
+    <button (click)="delete(personaje)">Eliminar de Favorito</button>
+  </li>
+</ul>

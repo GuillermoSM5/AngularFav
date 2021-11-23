@@ -1,0 +1,22 @@
+<form (ngSubmit)="mostrar()">
+  <input
+    autocomplete="off"
+    type="text"
+    name="termino"
+    placeholder="Busca un personaje por id"
+    [(ngModel)]="termino"
+  />
+  <button type="submit">Buscar</button>
+</form>
+
+<div *ngIf="resultados.name">
+  <h3>{{ resultados.name }}</h3>
+  <button (click)="add()">Agregar a Favorito</button>
+  <p>
+    Especie: <strong>{{ resultados.species }}</strong>
+  </p>
+  <p>
+    Status: <strong>{{ resultados.status }}</strong>
+  </p>
+  <img [src]="resultados.image" alt="" />
+</div>
